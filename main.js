@@ -33,10 +33,7 @@ const isInteger = (fizzNumVal, buzzNumVal) => {
   if (Number.isInteger(fizzNumVal) && Number.isInteger(buzzNumVal) && 0 < fizzNumVal && fizzNumVal < 100 && 0 < buzzNumVal && buzzNumVal < 100) {
     controlFizzBuzz(fizzNumVal, buzzNumVal);
   } else {
-    let error = '1~99までの整数値で入力してください';
-    let listElement = document.createElement('li');
-    listElement.textContent = error;
-    elements.outputsItem.appendChild(listElement);
+    elements.outputsItem.textContent = '1~99までの整数値で入力してください';
   }
 };
 
@@ -54,7 +51,7 @@ const controlFizzBuzz = (fizzNumVal, buzzNumVal) => {
       elements.outputsItem.appendChild(listElement);
     } else if (i % buzzNumVal === 0) {
       listElement = document.createElement('li');
-      listElement.textContent = `Fizz ${ i }`;
+      listElement.textContent = `Buzz ${ i }`;
       elements.outputsItem.appendChild(listElement);
     }
   }
